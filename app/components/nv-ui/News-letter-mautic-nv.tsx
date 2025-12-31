@@ -34,7 +34,7 @@ export default function MauticNewsletterForm({
 
         // Caso 2: Mautic escribe dentro de su propio div
         const msgDiv = document.getElementById(
-          "mauticform_newsletterneverlandcom_message"
+          "mauticform_newslettertomasfeldscl_message"
         );
         if (msgDiv && msgDiv.textContent?.trim() !== "") {
           onSubmitSuccess?.();
@@ -52,20 +52,20 @@ export default function MauticNewsletterForm({
     <div id="mauticform_wrapper_newsletterneverlandcom">
       <form
         method="post"
-        action="https://mailing.estudiosneverland.com/form/submit?formId=5"
-        id="mauticform_newsletterneverlandcom"
-        data-mautic-form="newsletterneverlandcom"
+        action="https://mailing.estudiosneverland.com/form/submit?formId=7"
+        id="mauticform_newslettertomasfeldscl"
+        data-mautic-form="newslettertomasfeldscl"
         className="space-y-4"
       >
         {/* Mautic errors */}
         <div
-          id="mauticform_newsletterneverlandcom_error"
+          id="mauticform_newslettertomasfeldscl_error"
           className="text-red-600"
         ></div>
 
         {/* Mautic success message (usamos ref para detectarlo) */}
         <div
-          id="mauticform_newsletterneverlandcom_message"
+          id="mauticform_newslettertomasfeldscl_error"
           ref={messageRef}
           className="text-green-600"
         ></div>
@@ -75,14 +75,14 @@ export default function MauticNewsletterForm({
           <input
             type="text"
             name="mauticform[cap]"
-            id="mauticform_input_newsletterneverlandcom_cap"
+            id="mauticform_newslettertomasfeldscl_cap"
           />
         </div>
 
         {/* Email input */}
         <div>
           <label
-            htmlFor="mauticform_input_newsletterneverlandcom_email_form"
+            htmlFor="mauticform_newslettertomasfeldscl_email_form"
             className="block mb-1 text-sm font-medium text-[#111]"
           >
             Correo electrónico
@@ -91,7 +91,7 @@ export default function MauticNewsletterForm({
           <input
             type="email"
             name="mauticform[email_form]"
-            id="mauticform_input_newsletterneverlandcom_email_form"
+            id="mauticform_newslettertomasfeldscl_email_form"
             required
             className="w-full p-3 rounded bg-light text-[#111] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
@@ -102,7 +102,7 @@ export default function MauticNewsletterForm({
           type="submit"
           name="mauticform[submit]"
           value="1"
-          id="mauticform_input_newsletterneverlandcom_submit"
+          id="mauticform_newslettertomasfeldscl_submit"
           className="px-4 py-2 bg-primary text-dark rounded-[10px] cursor-pointer transition inline-flex font-bold focus:outline-none items-center justify-center w-8/10 hover:bg-dark md:border-2 border-transparent hover:text-primary hover:border-primary  duration-300 ease-in-out"
         >
           Enviar
@@ -112,20 +112,20 @@ export default function MauticNewsletterForm({
         <input
           type="hidden"
           name="mauticform[formId]"
-          id="mauticform_newsletterneverlandcom_id"
-          value="5"
+          id="mauticform_newslettertomasfeldscl_id"
+          value="7"
         />
         <input
           type="hidden"
           name="mauticform[return]"
-          id="mauticform_newsletterneverlandcom_return"
+          id="mauticform_newslettertomasfeldscl_return"
           value=""
         />
         <input
           type="hidden"
           name="mauticform[formName]"
-          id="mauticform_newsletterneverlandcom_name"
-          value="newsletterneverlandcom"
+          id="mauticform_newslettertomasfeldscl_name"
+          value="newslettertomasfeldscl"
         />
       </form>
     </div>
