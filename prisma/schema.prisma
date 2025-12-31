@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model EstadoEvento {
+  id                        Int       @id @default(autoincrement())
+  nombre                    String
+  fecha_creacion            DateTime  @default(now())
+  fecha_ultima_modificacion DateTime? @default(now())
+  modificado_por            String?
+  Evento                    Evento[]
+}
+
+model Evento {
+  id                        Int          @id @default(autoincrement())
+  texto                     String?
+  link                      String?
+  metadata                  Json?
+  fecha                     DateTime?
+  ciudad                    String?
+  teatro                    String?
+  estadoId                  Int
+  showId                    Int?
+  webId                     Int?
+  fecha_creacion            DateTime     @default(now())
+  fecha_ultima_modificacion DateTime?    @default(now())
+  modificado_por            String?
+  fecha_publicacion         DateTime?
+  fecha_anuncio             DateTime?
+  EstadoEvento              EstadoEvento @relation(fields: [estadoId], references: [id])
+  Show                      Show?        @relation(fields: [showId], references: [id])
+  Web                       Web?         @relation(fields: [webId], references: [id])
+}
+
+model Show {
+  id                        Int       @id @default(autoincrement())
+  nombre                    String    @unique
+  urlImg                    String?
+  fecha_creacion            DateTime  @default(now())
+  fecha_ultima_modificacion DateTime? @default(now())
+  modificado_por            String?
+  Evento                    Evento[]
+}
+
+model Web {
+  id                        Int       @id @default(autoincrement())
+  nombre                    String    @unique
+  fecha_creacion            DateTime  @default(now())
+  fecha_ultima_modificacion DateTime? @default(now())
+  modificado_por            String?
+  urlImg                    String?
+  Evento                    Evento[]
+}
