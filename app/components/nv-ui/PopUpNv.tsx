@@ -11,6 +11,7 @@ interface PopUpNvProps {
   title: string;
   description: string;
   imageUrl: string;
+  mobileImageUrl?: string;
   ctaText?: string;
   ctaLink?: string;
 }
@@ -22,6 +23,7 @@ export const PopUpNv: React.FC<PopUpNvProps> = ({
   title,
   description,
   imageUrl,
+  mobileImageUrl,
   ctaText,
   ctaLink,
 }) => {
@@ -42,10 +44,17 @@ export const PopUpNv: React.FC<PopUpNvProps> = ({
     <div className="fixed inset-0 z-9999 flex items-center justify-center">
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
 
-      <div className="relative z-10 w-[95%] max-w-4xl bg-light rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-xl">
-        <div className="md:w-1/2 w-full h-75 md:h-auto">
+      <div className="relative z-10 w-[95%] max-w-4xl bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-xl">
+        <div className="md:w-1/2 w-full h-[300px] md:h-auto hidden lg:block">
           <SmartImage
             src={imageUrl}
+            alt="popup"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="md:w-1/2 w-full  md:h-auto block lg:hidden">
+          <SmartImage
+            src={mobileImageUrl || imageUrl}
             alt="popup"
             className="w-full h-full object-cover"
           />

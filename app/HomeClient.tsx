@@ -69,7 +69,8 @@ export default function HomeClient({ eventos }: { eventos: Evento[] }) {
         variant="form"
         title="Suscríbete a nuestro newsletter"
         description="Recibe novedades, estrenos y contenido exclusivo directo en tu correo."
-        imageUrl="https://edo-caroe-neverland-public.s3.us-east-2.amazonaws.com/imagencardexample1080x1350.jpg"
+        imageUrl="https://edo-caroe-neverland-public.s3.us-east-2.amazonaws.com/Popup/Felds.webp"
+        mobileImageUrl="https://edo-caroe-neverland-public.s3.us-east-2.amazonaws.com/Popup/3.webp"
       />
     </main>
   );

@@ -26,7 +26,7 @@ export const FooterNv: React.FC<FooterProps> = ({
     <footer className="flex flex-col items-center justify-center text-center lg:text-start bg-[#242424] text-light w-full ">
       <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start w-full max-w-7xl lg:h-80 py-10">
         <div className="py-8 lg:py-0 w-full lg:max-w-1/4 flex justify-center lg:justify-start">
-          <div className="h-10 flex lg:hidden">
+          <div className="h-20 flex lg:hidden">
             <SmartImage
               src={logoMobile.src}
               alt={logoMobile.alt}
