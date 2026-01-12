@@ -23,7 +23,7 @@ export default function HomeClient({ eventos }: { eventos: Evento[] }) {
         title1="TOMÁS FELDS"
         title2=""
         description1="Promete sorpresa, asombro"
-        description2="y más con sus shows de magia. ¿Te lo vas a perder?"
+        description2="y más con sus shows de magia."
         ctaText="No te pierdas nada"
         ctaLink="https://insta.openinapp.co/gbzx7"
         buttonTextColor="dark"

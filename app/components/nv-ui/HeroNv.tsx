@@ -41,7 +41,7 @@ export const HeroBannerNv: React.FC<HeroBannerProps> = ({
     w-svw h-svh
     bg-(image:--bg-mobile)
     lg:bg-(image:--bg-desktop)
-    bg-cover bg-center bg-no-repeat
+    bg-cover bg-top lg:bg-center bg-no-repeat
     lg:px-20 xl:px-36
     text-light
     flex flex-col lg:flex-row-reverse
@@ -79,7 +79,7 @@ export const HeroBannerNv: React.FC<HeroBannerProps> = ({
             variant="primary"
             link={ctaLink}
             buttonTextColor={buttonTextColor}
-            className="text-sm sm:text-base w-full lg:text-xl 2xl:text-2xl px-6 py-2 h-14 lg:h-20 mt-4"
+            className="text-sm sm:text-base w-full lg:w-8/10 2xl:w-full lg:text-xl 2xl:text-2xl px-6 py-2 h-14 lg:h-14 2xl:h-20 mt-4"
           >
             {ctaText}
           </ButtonNv>
