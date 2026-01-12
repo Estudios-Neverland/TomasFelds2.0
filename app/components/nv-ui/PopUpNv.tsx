@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import MauticNewsletterForm from "./News-letter-mautic-nv";
 import { SmartImage } from "./ui/SmartImage";
-import { ButtonNv } from "./ButtonNv";
 
 interface PopUpNvProps {
   isOpen: boolean;
@@ -15,7 +14,6 @@ interface PopUpNvProps {
   mobileImageUrl?: string;
   ctaText?: string;
   ctaLink?: string;
-  buttonTextColor?: "dark" | "light";
 }
 
 export const PopUpNv: React.FC<PopUpNvProps> = ({
@@ -28,7 +26,6 @@ export const PopUpNv: React.FC<PopUpNvProps> = ({
   mobileImageUrl,
   ctaText,
   ctaLink,
-  buttonTextColor,
 }) => {
   const [submitted, setSubmitted] = useState(false);
 
@@ -45,10 +42,10 @@ export const PopUpNv: React.FC<PopUpNvProps> = ({
 
   return (
     <div className="fixed inset-0 z-9999 flex items-center justify-center">
-      <div className="absolute inset-0 bg-dark/60" onClick={onClose} />
+      <div className="absolute inset-0 bg-black/60" onClick={onClose} />
 
       <div className="relative z-10 w-[95%] max-w-4xl bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-xl">
-        <div className="md:w-1/2 w-full h-75 md:h-auto hidden lg:block">
+        <div className="md:w-1/2 w-full h-[300px] md:h-auto hidden lg:block">
           <SmartImage
             src={imageUrl}
             alt="popup"
@@ -66,7 +63,7 @@ export const PopUpNv: React.FC<PopUpNvProps> = ({
         <div className="md:w-1/2 w-full p-6 flex flex-col justify-center gap-6 text-center relative text-dark">
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 text-xl font-bold text-zinc-500 hover:text-dark"
+            className="absolute top-3 right-3 text-xl font-bold text-zinc-500 hover:text-black"
           >
             ✕
           </button>
@@ -102,15 +99,12 @@ export const PopUpNv: React.FC<PopUpNvProps> = ({
                 correo.
               </p>
 
-              <ButtonNv
-                variant="primary"
+              <button
                 onClick={onClose}
-                link={ctaLink}
-                buttonTextColor={buttonTextColor}
-                className="text-sm sm:text-base lg:text-xl 2xl:text-2xl h-14 lg:h-20 mt-4 mx-auto px-6 py-3 rounded-[10px] font-semibold hover:opacity-90 transition cursor-pointer w-8/10"
+                className="mx-auto bg-primary text-dark px-6 py-3 rounded-[10px] font-semibold hover:opacity-90 transition cursor-pointer w-8/10"
               >
-                {ctaText}
-              </ButtonNv>
+                Cerrar
+              </button>
             </div>
           )}
         </div>
