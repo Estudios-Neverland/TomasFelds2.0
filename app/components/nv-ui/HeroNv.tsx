@@ -66,12 +66,12 @@ export const HeroBannerNv: React.FC<HeroBannerProps> = ({
 
       {/* Content */}
       <div className="w-full  2xl:w-2/6 max-w-fit px-6 py-10 lg:py-0 flex flex-col items-center lg:items-start justify-center text-center lg:text-left gap-6">
-        <h2 className="text-3xl sm:text-4xl md:text-6xl 2xl:text-[70px] min-[1920px]:text-[100px] font-extrabold">
+        <h3 className="text-3xl sm:text-4xl md:text-3xl 2xl:text-5xl 2xl:leading-[1.2] min-[1920px]:text-[100px] font-extrabold lg:whitespace-nowrap">
           <span className="lg:block">{title1}</span>
           <span className="lg:block">{title2}</span>
-        </h2>
+        </h3>
         <div className="">
-          <p className="text-base sm:text-lg md:text-2xl lg:text-2xl font-semibold max-w-xl mt-4 2xl:leading-10">
+          <p className="text-base sm:text-lg md:text-2xl lg:text-2xl 2xl:text-2xl font-semibold max-w-xl mt-4 2xl:leading-10 lg:whitespace-nowrap">
             <span className="block">{description1}</span>
             <span className="block">{description2}</span>
           </p>

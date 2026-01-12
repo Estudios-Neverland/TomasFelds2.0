@@ -42,7 +42,7 @@ export default function YouTubeEmbed({
       className="w-full mx-auto max-w-7xl mb-6 lg:mb-10 px-8 lg:px-6 2xl:px-0"
       id={id}
     >
-      <h3 className="font-bold text-2xl lg:text-2xl xl:text-4xl 2xl:text-6xl text-center pb-4">
+      <h3 className="font-bold text-2xl lg:text-3xl xl:text-5xl text-center text-light mb-6">
         {title}
       </h3>
       <div className="relative w-full overflow-hidden rounded-nv shadow-lg aspect-video block max-w-7xl">

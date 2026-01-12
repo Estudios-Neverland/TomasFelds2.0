@@ -20,7 +20,7 @@ export const FunnelNv: React.FC<FunnelProps> = ({
   return (
     <section className="w-full px-8 lg:px-6 2xl:px-0 mb-6 lg:mb-10 bg-dark h-auto text-white flex flex-col items-center lg:justify-start justify-around overflow-x-hidden transition-all duration-300">
       <div className="flex flex-col w-full px-2 py-4 text-center justify-center items-center lg:max-w-7xl">
-        <h3 className="font-bold text-2xl lg:text-2xl xl:text-4xl 2xl:text-6xl">
+        <h3 className="font-bold text-2xl lg:text-3xl xl:text-5xl text-center">
           {title}
         </h3>
         <p className="text-sm lg:text-xl 2xl:text-2xl">{subtitle}</p>

@@ -13,18 +13,19 @@ import { EventsNv } from "./components/nv-ui/EventsNv";
 import SpotifyEmbed from "./components/nv-ui/Spotify";
 import YouTubeEmbed from "./components/nv-ui/Youtube";
 import Instagram from "./components/nv-ui/Instagram";
+import { ProductNv } from "./components/nv-ui/ProductNv";
 
 export default function HomeClient({ eventos }: { eventos: Evento[] }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
     <main className="flex flex-col min-h-screen items-center justify-center bg-dark font-sans ">
       <HeroBannerNv
-        title1="Edo Caroe"
-        title2="No Tiene Show"
-        description1="Prepárate para una experiencia cargada"
-        description2="de humor, improvización y risas aseguradas"
-        ctaText="Consigue tu ticket"
-        ctaLink="#Tickets"
+        title1="TOMÁS FELDS"
+        title2=""
+        description1="Promete sorpresa, asombro"
+        description2="y más con sus shows de magia. ¿Te lo vas a perder?"
+        ctaText="No te pierdas nada"
+        ctaLink="https://insta.openinapp.co/gbzx7"
         buttonTextColor="dark"
         imageUrlDesktop="https://edo-caroe-neverland-public.s3.us-east-2.amazonaws.com/HeroBanners/Tomas+Felds/Header-1.webp"
         imageUrlMobile="https://edo-caroe-neverland-public.s3.us-east-2.amazonaws.com/HeroBanners/Tomas+Felds/Img-banner-2.webp"
@@ -32,10 +33,21 @@ export default function HomeClient({ eventos }: { eventos: Evento[] }) {
       {eventos.length > 0 && (
         <EventsNv title="Consigue tu ticket" events={eventos} id="Tickets" />
       )}
+      <ProductNv
+        imageSrc="https://edo-caroe-neverland-public.s3.us-east-2.amazonaws.com/IMG-felds1.webp"
+        imageAlt="Tomás Felds"
+        title="Magia que conecta"
+        text="Prepárate para una experiencia donde la magia, el humor y
+la improvisación se cruzan con el mundo de los eventos y los
+grandes encuentros. Tomás Felds no solo sorprende con su
+talento, también se mueve entre figuras clave y momentos
+únicos, llevando risas, asombro y carisma a cada espacio
+donde está presente."
+      />
       <YouTubeEmbed
         id="Youtube"
         videoUrl="https://youtu.be/rSu-uwONxTE?si=JIG-iRXx8fQmK4ms"
-        title="Un poco más de mi show"
+        title="Revisa mi contenido en YouTube"
       />
       <FunnelNv
         title="Tiéntate con este contenido gratis"
@@ -69,7 +81,8 @@ export default function HomeClient({ eventos }: { eventos: Evento[] }) {
         variant="form"
         title="Suscríbete a nuestro newsletter"
         description="Recibe novedades, estrenos y contenido exclusivo directo en tu correo."
-        imageUrl="https://edo-caroe-neverland-public.s3.us-east-2.amazonaws.com/imagencardexample1080x1350.jpg"
+        imageUrl="https://edo-caroe-neverland-public.s3.us-east-2.amazonaws.com/Popup/Felds.webp"
+        mobileImageUrl="https://edo-caroe-neverland-public.s3.us-east-2.amazonaws.com/Popup/3.webp"
       />
     </main>
   );
