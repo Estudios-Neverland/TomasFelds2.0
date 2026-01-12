@@ -39,13 +39,13 @@ export default function YouTubeEmbed({
 
   return (
     <section
-      className="w-full mx-auto max-w-7xl mb-6 lg:mb-10 px-8 lg:px-6 2xl:px-0"
+      className="w-full mx-auto xl:max-w-6xl 2xl:max-w-7xl mb-16 px-8 lg:px-6 xl:px-0"
       id={id}
     >
-      <h3 className="font-bold text-2xl lg:text-3xl xl:text-5xl text-center text-light mb-6">
+      <h3 className="font-bold text-2xl lg:text-3xl xl:text-5xl text-center text-light">
         {title}
       </h3>
-      <div className="relative w-full overflow-hidden rounded-nv shadow-lg aspect-video block max-w-7xl">
+      <div className="relative w-full overflow-hidden rounded-nv shadow-lg aspect-video block max-w-7xl mt-8">
         <iframe
           src={embedUrl}
           title={title || "YouTube video player"}
