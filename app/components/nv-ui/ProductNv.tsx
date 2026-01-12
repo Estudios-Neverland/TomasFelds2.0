@@ -15,8 +15,8 @@ export const ProductNv: React.FC<ProductNvProps> = ({
   text,
 }) => {
   return (
-    <section className="w-full bg-dark text-white pb-16 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-stretch gap-10">
+    <section className="w-full bg-dark text-white pb-16 px-8  2xl:px-0">
+      <div className="xl:max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch justify-between gap-10">
         {/* Imagen */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <div className="relative rounded-xl overflow-hidden border border-primary">
@@ -34,7 +34,7 @@ export const ProductNv: React.FC<ProductNvProps> = ({
             {title}
           </h2>
 
-          <p className="text-sm lg:text-xl 2xl:text-2xl">{text}</p>
+          <p className="text-sm lg:text-xl 2xl:text-2xl text-justify">{text}</p>
         </div>
       </div>
     </section>
