@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { HeaderNv } from "./components/nv-ui/HeaderNv";
 import { FooterNv } from "./components/nv-ui/FooterNv";
+import { prisma } from "@/app/lib/prisma";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,11 +37,29 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const hasTickets = await prisma.evento.findFirst({
+    where: {
+      webId: 36,
+      fecha: { not: null },
+      estadoId: { in: [2, 3, 4, 6, 7, 8, 9] },
+    },
+    select: { id: true },
+  });
+
+  const navLinks = [
+    ...(hasTickets ? [{ text: "Tickets", href: "#Tickets" }] : []),
+    { text: "YouTube", href: "#Youtube" },
+    {
+      text: "Contacto",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=contacto@estudiosneverland.cl",
+      target: "_blank",
+    },
+  ];
   return (
     <html lang="en" className="scroll-smooth">
       <body
@@ -49,15 +68,7 @@ export default function RootLayout({
         <HeaderNv
           urlLogo="https://edo-caroe-neverland-public.s3.us-east-2.amazonaws.com/Logos/Tomas+Felds/Logo-felds-1.webp"
           altLogo="Estudios Neverland Logo"
-          navLinks={[
-            { text: "Tickets", href: "#Tickets" },
-            { text: "YouTube", href: "#Youtube" },
-            {
-              text: "Contacto",
-              href: "https://mail.google.com/mail/?view=cm&fs=1&to=contacto@estudiosneverland.cl",
-              target: "_blank",
-            },
-          ]}
+          navLinks={navLinks}
           buttonTextColor="dark"
           neverland={false}
         />

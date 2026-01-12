@@ -127,7 +127,7 @@ export const FooterNv: React.FC<FooterProps> = ({
       <div className="w-full bg-dark flex justify-center">
         <div className="py-8 lg:py-2 px-4 lg:mx-0  w-full flex items-center justify-between max-w-7xl ">
           <p className="text-base lg:text-xl font-bold">
-            © 2025 Estudios Neverland, Todos los derechos reservados.
+            © 2026 Estudios Neverland, Todos los derechos reservados.
           </p>
           {RRSS ? (
             <div className="py-4 hidden lg:flex gap-8 mt-2 flex-wrap justify-center items-center">
