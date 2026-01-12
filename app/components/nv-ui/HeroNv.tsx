@@ -41,7 +41,7 @@ export const HeroBannerNv: React.FC<HeroBannerProps> = ({
     w-svw h-svh
     bg-(image:--bg-mobile)
     lg:bg-(image:--bg-desktop)
-    bg-cover bg-center bg-no-repeat
+    bg-cover bg-top lg:bg-center bg-no-repeat
     lg:px-20 xl:px-36
     text-light
     flex flex-col lg:flex-row-reverse
