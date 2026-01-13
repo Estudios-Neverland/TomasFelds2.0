@@ -19,7 +19,7 @@ export default function MauticNewsletterForm({
   /** Detectar envío exitoso con MutationObserver */
   useEffect(() => {
     const wrapper = document.getElementById(
-      "mauticform_wrapper_newsletterneverlandcom"
+      "mauticform_wrapper_newslettertomasfeldscl"
     );
     if (!wrapper) return;
 
@@ -49,7 +49,7 @@ export default function MauticNewsletterForm({
   }, [onSubmitSuccess]);
 
   return (
-    <div id="mauticform_wrapper_newsletterneverlandcom">
+    <div id="mauticform_wrapper_newslettertomasfeldscl">
       <form
         method="post"
         action="https://mailing.estudiosneverland.com/form/submit?formId=7"
@@ -65,7 +65,7 @@ export default function MauticNewsletterForm({
 
         {/* Mautic success message (usamos ref para detectarlo) */}
         <div
-          id="mauticform_newslettertomasfeldscl_error"
+          id="mauticform_newslettertomasfeldscl_message"
           ref={messageRef}
           className="text-green-600"
         ></div>
